@@ -82,7 +82,6 @@ textarea {
   font-family: sans-serif;
   font-size: inherit;
   line-height: inherit;
-  outline: 1px solid transparent;
 }
 
 button {
@@ -167,7 +166,6 @@ textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: inherit;
 }
 
 .input {
@@ -544,28 +542,28 @@ textarea.input {
   padding: 0.6875rem 0.8125rem;
   background: rgba(255,255,255,.05);
   border: 1px solid rgba(255,255,255,.2);
-  border-radius: 0.3125em;
+  border-radius: 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   min-height: 2.625rem;
   outline: 2px solid rgba(0,0,0,0);
   color: #fff;
-  -webkit-transition: border .3s ease 0s,-webkit-box-shadow .3s .2s;
-  transition: border .3s ease 0s,-webkit-box-shadow .3s .2s;
-  transition: border .3s ease 0s,box-shadow .3s .2s;
-  transition: border .3s ease 0s,box-shadow .3s .2s,-webkit-box-shadow .3s .2s;
+  -webkit-transition: outline .3s ease 0s,-webkit-box-shadow .3s .2s;
+  transition: outline .3s ease 0s,-webkit-box-shadow .3s .2s;
+  transition: outline .3s ease 0s,box-shadow .3s .2s;
+  transition: outline .3s ease 0s,box-shadow .3s .2s,-webkit-box-shadow .3s .2s;
 }
 
 ._form-error .input-template-form-01 textarea,
 ._form-error .input-template-form-01 input {
-   border: 2px solid #e61d1d;
+  outline: 2px solid #e61d1d;
   -webkit-box-shadow: 0px 0px 10px #e61d1d;
           box-shadow: 0px 0px 10px #e61d1d;
 }
 
 .input-template-form-01 textarea:focus,
 .input-template-form-01 input:focus {
-  border: 2px solid var(--bg-form-1--inverse);
+  outline: 2px solid var(--bg-form-1--inverse);
   -webkit-box-shadow: 0px 0px 10px #a604f2;
           box-shadow: 0px 0px 10px #a604f2;
 }
