@@ -284,12 +284,15 @@ textarea.input {
   padding: 3.125rem 0;
 }
 
+.form-temp--01__container {
+  position: relative;
+}
+
 .form-temp--01__body {
   position: relative;
   border-radius: 1.25rem;
   background-color: rgba(255,255,255,.04);
   padding: 1.125rem;
-  overflow: hidden;
   z-index: 2;
 }
 
@@ -301,6 +304,7 @@ textarea.input {
   width: 100%;
   height: 100%;
   background: rgba(10,13,23,.7);
+  border-radius: 1.25rem;
 }
 
 .form-temp--01__media {
@@ -322,6 +326,7 @@ textarea.input {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -1;
+  border-radius: 1.25rem;
 }
 
 .title-block-tmp-01 {
@@ -623,6 +628,8 @@ textarea.input {
   margin-bottom: 0.375rem;
 }
 
+
+
 @-webkit-keyframes rocket {
   0% {
     -webkit-transform: translateX(0);
@@ -675,6 +682,40 @@ textarea.input {
   }
 }
 
+@-webkit-keyframes blurcircle {
+  0% {
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+  }
+
+  50% {
+    -webkit-filter: blur(100px);
+            filter: blur(100px);
+  }
+
+  100% {
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+  }
+}
+
+@keyframes blurcircle {
+  0% {
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+  }
+
+  50% {
+    -webkit-filter: blur(100px);
+            filter: blur(100px);
+  }
+
+  100% {
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+  }
+}
+
 @media (min-width: 29.99875em) {
   .template-form--01__submit {
     -ms-grid-column-span: 2;
@@ -694,6 +735,7 @@ textarea.input {
     background: url("../img/form--01/container-wrapper.png") center/cover no-repeat; }
   .form-temp--01__body::before {
     z-index: -1;
+    opacity: .8;
   }
 
   .form-temp--01__body {
@@ -709,6 +751,7 @@ textarea.input {
 
   .form-temp--01__media img {
     z-index: 0;
+    border-radius: 0rem;
   }
 
   .form-temp--01__media {
@@ -735,6 +778,45 @@ textarea.input {
 
   .quote-block {
     display: block;
+  }
+
+  .decor-form-temp::before,
+  .decor-form-temp::after,
+  .decor-form-temp span {
+    position: absolute;
+    border-radius: 50%;
+    width: 13.919414%;
+    aspect-ratio: 152/152;
+    background-color: #a604f2;
+    z-index: -2;
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+    -webkit-animation: blurcircle 3s infinite linear;
+            animation: blurcircle 3s infinite linear;
+  }
+  
+  .decor-form-temp::before,
+  .decor-form-temp::after {
+    content: "";
+  }
+  
+  .decor-form-temp span {
+    top: -9.895833%;
+    left: -2.472527%;
+  }
+  
+  .decor-form-temp::before {
+    top: 0;
+    right: -3.937729%;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  
+  .decor-form-temp::after {
+    bottom: -10.423611%;
+    left: -5.190476%;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
   }
 }
 
